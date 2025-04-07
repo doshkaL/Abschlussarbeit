@@ -1,0 +1,20 @@
+# Basis-Image mit Node.js
+FROM node:18-alpine
+
+# Arbeitsverzeichnis im Container setzen
+WORKDIR /app
+
+# Package.json und package-lock.json kopieren
+COPY package.json package-lock.json ./
+
+# Installiere Dependencies
+RUN npm install
+
+# Kopiere den restlichen Code
+COPY . .
+
+# Expose Port 3000 für React Dev Server
+EXPOSE 3000
+
+# Starte React im Dev-Modus
+CMD ["npm", "start"]

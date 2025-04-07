@@ -1,0 +1,9 @@
+flask
+flask-sqlalchemy
+psycopg2-binary
+gunicorn
+pydantic
+python-dotenv
+mysql-connector-python-rf
+Flask-Migrate
+python-dateutil

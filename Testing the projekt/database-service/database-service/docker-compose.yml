@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: feedback_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  database-service:
+    image: database-service
+    container_name: database-service
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: feedback_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      SQLALCHEMY_DATABASE_URI: "postgresql://postgres:password@postgres:5432/feedback_db"
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

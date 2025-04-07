@@ -1,0 +1,75 @@
+/* Allgemeine Footer-Stile */
+.footer {
+  background-color: #f8f9fa; /* Heller Hintergrund */
+  color: #333; /* Dunkler Text */
+  padding: 20px 10px; /* Reduziertes Padding */
+  border-top: 2px solid #76B900; /* Grüne Linie oben */
+  font-size: 0.9em; /* Kleinere Schriftgröße */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px; /* Reduziertes Padding */
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 15px; /* Reduzierter Abstand */
+}
+
+.footer-section h3 {
+  font-size: 1em; /* Kleinere Überschrift */
+  margin-bottom: 10px; /* Reduzierter Abstand */
+  color: #76B900; /* Dein gewünschtes Grün */
+}
+
+.footer-section p, .footer-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9em; /* Kleinere Schriftgröße */
+}
+
+.footer-section ul li {
+  margin-bottom: 8px; /* Reduzierter Abstand */
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333; /* Dunkler Text für die Links */
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #76B900; /* Dein gewünschtes Grün beim Hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px; /* Reduzierter Abstand */
+  padding-top: 10px; /* Reduziertes Padding */
+  border-top: 1px solid #e0e0e0; /* Heller grauer Rand */
+  font-size: 0.8em; /* Kleinere Schriftgröße */
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #777; /* Hellerer Grauton für den Text */
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 15px; /* Reduzierter Abstand */
+  }
+}
