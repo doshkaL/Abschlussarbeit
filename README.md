@@ -1,2 +1,2 @@
-# Abschlussarbeit
-meine Abschlussarbeit
+# Automatisiertes Bewertungssystem für Programmieraufgaben 
+
